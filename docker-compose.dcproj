@@ -5,7 +5,7 @@
     <DockerTargetOS>Linux</DockerTargetOS>
     <ProjectGuid>5c57d5e1-f715-47ca-827e-a92df9880e41</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
-    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/SomeModels</DockerServiceUrl>
+    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/health</DockerServiceUrl>
     <DockerServiceName>healthchecks.somemodelservice</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
