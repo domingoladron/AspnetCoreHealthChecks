@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  healthchecks.somemodelservice:
+    image: ${DOCKER_REGISTRY-}healthcheckssomemodelservice
+    build:
+      context: .
+      dockerfile: HealthChecks.SomeModelService/Dockerfile

@@ -1,0 +1,1 @@
+dotnet new ptml-controller-tests --model SomeModel --name SomeModel --base-namespace HealthChecks.ExampleCrud --force
