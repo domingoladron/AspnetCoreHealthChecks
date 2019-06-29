@@ -1,1 +1,0 @@
-dotnet new ptml-repo-tests --model SomeModel --name SomeModel --base-namespace HealthChecks.ExampleCrud --force
