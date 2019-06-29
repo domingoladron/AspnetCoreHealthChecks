@@ -1,11 +1,17 @@
-﻿using Autofac;
+using System.Linq;
+using System.Threading.Tasks;
+using Autofac;
 using HealthChecks.Configuration;
 using HealthChecks.SomeModelService.Health;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
 
 namespace HealthChecks.SomeModelService
@@ -27,7 +33,8 @@ namespace HealthChecks.SomeModelService
         {
             services.AddCors();
             services.AddHealthChecks()
-                .AddCheck<ApiHealthCheck>("api");
+                .AddCheck<ApiHealthCheck>("api")
+                .AddCheck<SecondaryHealthCheck>("secondary");
             //add additional healthchecks here, as needed
             //as described here https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks
 

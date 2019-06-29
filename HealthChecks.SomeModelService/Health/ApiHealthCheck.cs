@@ -14,10 +14,10 @@ namespace HealthChecks.SomeModelService.Health
             var isHealthy = true;
             if(isHealthy)
             {
-                return Task.FromResult(HealthCheckResult.Healthy("healthy"));
+                return Task.FromResult(HealthCheckResult.Healthy("I am one healthy microservice API"));
             }
 
-            return Task.FromResult(HealthCheckResult.Unhealthy("unhealthy"));
+            return Task.FromResult(HealthCheckResult.Unhealthy("I am the sad, unhealthy microservice API"));
         }
     }
 }
